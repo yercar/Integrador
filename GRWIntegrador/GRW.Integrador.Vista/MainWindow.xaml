@@ -1,0 +1,35 @@
+﻿<Window x:Class="GRW.Integrador.Vista.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:vista="clr-namespace:GRW.Integrador.Vista"
+        Title="Menú" Height="605.388" Width="525" AllowsTransparency="True" Background="Transparent" 
+        WindowStyle="None" WindowStartupLocation="CenterScreen">
+
+    <Grid>
+        <Grid x:Name="GridContenedor" HorizontalAlignment="Left" Height="48" Margin="10,10,0,0" VerticalAlignment="Top" Width="487" Background="#FF4F789B">
+            <Label x:Name="LblTitulo" Content="Integrador Contable" HorizontalAlignment="Left" VerticalAlignment="Top" Width="309" Foreground="#FFF5F1F1" FontSize="22" FontFamily="Segoe UI Semibold" Height="48"/>
+            <Label Name="LblUsuario" HorizontalAlignment="Right" Margin="351,10,0,0" VerticalAlignment="Top" Width="126" Height="28" Foreground="#FFF3EEEE"/>
+        </Grid>
+        <Grid x:Name="GridContenido" HorizontalAlignment="Left" Height="501" Margin="10,63,0,0" VerticalAlignment="Top" Width="487">
+            <!--<vista:MenuIntegrador/>-->
+            <!--<vista:CargarArchivo/>-->
+            <!--<vista:AdministracionUsuarios/>-->
+            <!--<vista:TodosLosUsuarios/>-->
+            <!--<vista:Interfaces/>-->
+            <!--<vista:ControlDeInventarios/>-->
+            <!--<vista:Diarios/>-->
+            <!--<vista:Cuentas/>-->
+            <!--<vista:Dimensiones/>-->
+            <!--<vista:Bitacora/>-->
+            <!--<vista:LecturaAutomatica/>-->
+            <vista:AcercaDe/>
+            
+        </Grid>
+        <Grid x:Name="GridPieAplicacion" HorizontalAlignment="Left" Height="26" Margin="10,569,0,0" VerticalAlignment="Top" Width="487" Background="#FF4F789B">
+            <Image x:Name="ImgMenu" HorizontalAlignment="Left" Height="26" Margin="11,0,0,0" VerticalAlignment="Top" Width="27"/>
+            <Label x:Name="LblMenu" Content="Menú" HorizontalAlignment="Left" Margin="43,0,0,0" VerticalAlignment="Top" Foreground="#FFFBF5F5" Height="26" FontSize="10"/>
+            <Label x:Name="LblAcerca" Content="Acerca de..." HorizontalAlignment="Left" Margin="417,0,0,0" VerticalAlignment="Top" Foreground="#FFFBF5F5" Height="26" FontSize="10"/>
+        </Grid>
+
+    </Grid>
+</Window>

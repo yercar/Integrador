@@ -1,0 +1,60 @@
+﻿<UserControl
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:C1="http://schemas.componentone.com/wpf/Tile" x:Class="GRW.Integrador.Vista.MenuIntegrador" 
+             mc:Ignorable="d" 
+             d:DesignHeight="499.388" d:DesignWidth="480">
+    <Grid>
+
+        <C1:C1Tile HorizontalAlignment="Left" Margin="8,8,0,0" VerticalAlignment="Top" Height="112" Width="276" C1:C1TileService.PointerDownAnimation="True" Content="Cargar archivo" BackContent="Leer datos" Background="#FF61B925" Foreground="#FFF3E6E6" FontFamily="Segoe UI Semibold" FontSize="12" />
+        <C1:C1Tile HorizontalAlignment="Left" Margin="289,8,0,0" VerticalAlignment="Top" Height="112" Width="179" C1:C1TileService.PointerDownAnimation="True" Content="Bitacora" BackContent="Reportes de discrepancias" Background="#FF6952CF" Foreground="#FFF3E6E6" FontFamily="Segoe UI Semibold" FontSize="12"/>
+
+        <C1:C1SlideTile HorizontalAlignment="Left" VerticalAlignment="Top" Height="150" Width="150" C1:C1TileService.PointerDownAnimation="True" Margin="8,125,0,0" Content="Catálogo" BackContent="Interfaces" Background="#FF77CFBE" Foreground="#FFF3E6E6" FontFamily="Segoe UI Semibold" FontSize="12" SlideDirection="Right">
+            <C1:C1SlideTile.ContentTemplate>
+                <DataTemplate>
+                    <Border Background="#FF77CFBE">
+                        <TextBlock Text="{Binding}" VerticalAlignment="Center" HorizontalAlignment="Center" />
+                    </Border>
+                </DataTemplate>
+            </C1:C1SlideTile.ContentTemplate>
+            <C1:C1SlideTile.BackContentTemplate>
+                <DataTemplate>
+                    <Border Background="#FF77CFBE">
+                        <StackPanel VerticalAlignment="Center" HorizontalAlignment="Center">
+                            <TextBlock Text="{Binding}" Foreground="White" HorizontalAlignment="Center" FontSize="28" />
+                        </StackPanel>
+                    </Border>
+                </DataTemplate>
+            </C1:C1SlideTile.BackContentTemplate>
+        </C1:C1SlideTile>
+        <C1:C1Tile HorizontalAlignment="Left" VerticalAlignment="Top" Height="150" Width="150" C1:C1TileService.PointerDownAnimation="True" Margin="163,125,0,0" Content="Catálogo" BackContent="Diarios" Background="#FFE848D9" Foreground="#FFF3E6E6" FontFamily="Segoe UI Semibold" FontSize="12"/>
+        <C1:C1Tile HorizontalAlignment="Left" VerticalAlignment="Top" Height="150" Width="150" C1:C1TileService.PointerDownAnimation="True" Margin="318,125,0,0" Content="Catálogo" BackContent="Cuentas" Background="#FFCD6823" Foreground="#FFF3E6E6" FontFamily="Segoe UI Semibold" FontSize="12"/>
+
+        <C1:C1SlideTile HorizontalAlignment="Left" VerticalAlignment="Top" Height="97" Width="271" C1:C1TileService.PointerDownAnimation="True" Margin="197,280,0,0" Content="Catálogo" BackContent="Dimensiones" Background="#FF2E3EE8" Foreground="#FFF9EFEF" FontFamily="Segoe UI Semibold" FontSize="12" SlideDirection="Left">
+            <C1:C1SlideTile.ContentTemplate>
+                <DataTemplate>
+                    <Border Background="#FF2E3EE8">
+                        <TextBlock Text="{Binding}" VerticalAlignment="Center" HorizontalAlignment="Center" />
+                    </Border>
+                </DataTemplate>
+            </C1:C1SlideTile.ContentTemplate>
+            <C1:C1SlideTile.BackContentTemplate>
+                <DataTemplate>
+                    <Border Background="#FF2E3EE8">
+                        <StackPanel VerticalAlignment="Center" HorizontalAlignment="Center">
+                            <TextBlock Text="{Binding}" Foreground="White" HorizontalAlignment="Center" FontSize="28" />
+                        </StackPanel>
+                    </Border>
+                </DataTemplate>
+            </C1:C1SlideTile.BackContentTemplate>
+
+        </C1:C1SlideTile>
+        <C1:C1Tile HorizontalAlignment="Left" VerticalAlignment="Top" Height="97" Width="184" C1:C1TileService.PointerDownAnimation="True" Margin="8,280,0,0" Content="Catálogo" BackContent="Control de inventarios" Background="#FFCB232A" Foreground="#FFF3E6E6" FontFamily="Segoe UI Semibold" FontSize="12"/>
+        <C1:C1Tile HorizontalAlignment="Left" VerticalAlignment="Top" Height="107" Width="241" C1:C1TileService.PointerDownAnimation="True" Margin="8,382,0,0" Content="Reprocesos" BackContent="Cargar archivo" Background="#FF64A487" Foreground="#FFF3E6E6" FontFamily="Segoe UI Semibold" FontSize="12"/>
+        <C1:C1Tile HorizontalAlignment="Left" VerticalAlignment="Top" Height="66" Width="214" C1:C1TileService.PointerDownAnimation="True" Margin="254,382,0,0" BackContent="Administración" Content="Permisos" Background="#FFD35959" Foreground="#FFF3E6E6" FontFamily="Segoe UI Semibold" FontSize="12"/>
+        <C1:C1Tile HorizontalAlignment="Left" Margin="254,453,0,0" VerticalAlignment="Top" Height="36" Width="214" C1:C1TileService.PointerDownAnimation="True" Content="Salir" Background="#FF886A99" Foreground="#FFF7F3F3" Click="Salir_OnClick"/>
+
+    </Grid>
+</UserControl>

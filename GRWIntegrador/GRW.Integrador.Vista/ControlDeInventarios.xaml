@@ -1,0 +1,105 @@
+﻿<UserControl
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:c1="http://schemas.componentone.com/wpf/Basic"
+             xmlns:flexGrid="clr-namespace:C1.WPF.FlexGrid;assembly=C1.WPF.FlexGrid.4"
+             x:Class="GRW.Integrador.Vista.ControlDeInventarios" 
+             mc:Ignorable="d" 
+             d:DesignHeight="499.388" d:DesignWidth="480">
+    <Grid Background="{DynamicResource {x:Static SystemColors.WindowBrushKey}}">
+        <Label x:Name="LblTituloInventarios" Content="Interfaces" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Height="28" Width="211" FontFamily="Segoe UI Semibold"/>
+        <Label x:Name="LblNumeroInterfaces" Content="Número de interfaces:" Margin="21,43,325,432"></Label>
+        <TextBox x:Name="TxtNumeroInterfaces" Margin="25,72,325,404" IsEnabled="False" IsTabStop="False" Focusable="False"></TextBox>
+        <Label x:Name="LblNumeroPolizas" Content="Número de polizas a recibir:" Margin="260,43,61,432"></Label>
+        <TextBox x:Name="TxtNumeroPolizas" HorizontalAlignment="Left" Height="23" Margin="260,72,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="168" IsEnabled="False" IsTabStop="False" Focusable="False"/>
+
+        <c1:C1TabControl HorizontalAlignment="Left" Margin="21,115,0,0" VerticalAlignment="Top" Height="374" Width="451">
+            <c1:C1TabItem Header="Visión General">
+                <c1:C1TabItem.Content>
+                    <StackPanel>
+                        <Label x:Name="LblCatalogo" Content="Catálogo" Style="{StaticResource TituloTabs}"/>
+                        <Separator Background="#FFB7D8E4"/>
+                        <Separator Height="10" Visibility="Hidden"/>
+                        <flexGrid:C1FlexGrid HorizontalAlignment="Left" VerticalAlignment="Top" Height="334" Width="419">
+                            <flexGrid:C1FlexGrid.Columns>
+                                <flexGrid:Column Header="Clave" Width="80"/>
+                                <flexGrid:Column Header="Empresa" Width="80"/>
+                                <flexGrid:Column Header="Aplicativo" Width="80"/>
+                                <flexGrid:Column Header="Interfaz" Width="80"/>
+                                <flexGrid:Column Header="Digito sistema transaccional origen" Width="150"/>
+                                <flexGrid:Column Header="Moneda" Width="80"/>
+                                <flexGrid:Column Header="Clave contable de operación" Width="80"/>
+                                <flexGrid:Column Header="Nombre corto de la poliza" Width="80"/>
+                                <flexGrid:Column Header="Descripción de la poliza" Width="80"/>
+                                <flexGrid:Column Header="Periodicidad" Width="80"/>
+                                <flexGrid:Column Header="Obligatoriedad de arribo" Width="80"/>
+                            </flexGrid:C1FlexGrid.Columns>
+                        </flexGrid:C1FlexGrid>
+                    </StackPanel>
+                </c1:C1TabItem.Content>
+            </c1:C1TabItem>
+            <c1:C1TabItem Header="General">
+                <c1:C1TabItem.Content>
+                    <StackPanel>
+                        <Label x:Name="LblPolizas" Content="Pólizas" Style="{StaticResource TituloTabs}"/>
+                        <Separator Background="#FFB7D8E4"/>
+                        <WrapPanel>
+                            <Label x:Name="LblInterfaz" Content="Interfaz:" Width="80"></Label>
+                            <c1:C1ComboBox Height="22" Width="120" />
+                            <Separator Width="50" Visibility="Hidden"></Separator>
+                            <Label x:Name="LblClave" Content="Clave:" Width="80"></Label>
+                            <TextBox Width="65"></TextBox>
+                        </WrapPanel>
+                        <Separator Height=".1" Visibility="Hidden"></Separator>
+                        <WrapPanel>
+                            <Label x:Name="LblAplicativo" Content="Aplicativo:" Width="80"></Label>
+                            <c1:C1ComboBox Height="23" Width="120" />
+                            <Separator Width="50" Visibility="Hidden"></Separator>
+                            <CheckBox Content="Obligatoriedad de arribo"></CheckBox>
+                        </WrapPanel>
+                        <Separator Height=".1" Visibility="Hidden"></Separator>
+                        <WrapPanel>
+                            <Label x:Name="LblMoneda" Content="Moneda:" Width="80"></Label>
+                            <c1:C1ComboBox Height="23" Width="120" />
+                        </WrapPanel>
+                        <Separator Height=".1" Visibility="Hidden"></Separator>
+                        <WrapPanel>
+                            <Label x:Name="LblNombreCortoPoliza" Content="Nombre corto de la póliza:" Width="170"></Label>
+                            <TextBox Width="230"></TextBox>
+                        </WrapPanel>
+                        <Separator Height=".1" Visibility="Hidden"></Separator>
+                        <WrapPanel>
+                            <Label x:Name="LblDescripcionPoliza" Content="Descripción de la póliza:" Width="170"></Label>
+                            <TextBox Width="230"></TextBox>
+                        </WrapPanel>
+                        <Separator Height=".1" Visibility="Hidden"></Separator>
+                        <WrapPanel>
+                            <Label x:Name="LblEmpresa" Content="Empresa:" Width="170"></Label>
+                            <TextBox Width="230"></TextBox>
+                        </WrapPanel>
+                        <Separator Height=".1" Visibility="Hidden"></Separator>
+                        <WrapPanel>
+                            <Label x:Name="LblDigito" Content="Digito transaccional origen:" Width="170"></Label>
+                            <TextBox Width="230"></TextBox>
+                        </WrapPanel>
+                        <Separator Height=".1" Visibility="Hidden"></Separator>
+                        <WrapPanel>
+                            <Label x:Name="LblPeriodicidad" Content="Periodicidad:" Width="170"></Label>
+                            <TextBox Width="230"></TextBox>
+                        </WrapPanel>
+                        <Grid Height="43">
+                            <Button x:Name="BtnNuevaInterface" Content="Nueva interface" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Width="104" Height="30"/>
+                            <Button x:Name="BtnEliminarInterface" Content="Eliminar interface" HorizontalAlignment="Left" Margin="164,10,0,0" VerticalAlignment="Top" Width="104" Height="30"/>
+                            <Button x:Name="BtnLimpiarInterface" Content="Limpiar campos" HorizontalAlignment="Left" Margin="315,10,0,0" VerticalAlignment="Top" Width="104" Height="30"/>
+                        </Grid>
+
+
+                    </StackPanel>
+                </c1:C1TabItem.Content>
+            </c1:C1TabItem>
+        </c1:C1TabControl>
+
+    </Grid>
+</UserControl>
