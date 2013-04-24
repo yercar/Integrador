@@ -43,6 +43,9 @@ namespace GRW.Integrador.Vista
 
                 //asigno la credencial a la aplicación para que viva el usuario en toda su sesión
                 System.Threading.Thread.CurrentPrincipal = credencialUsuario;
+
+                //Consulto en la base de datos los permisos que tiene ese usuario
+
             }
 
             return login.UsuarioAceptado;

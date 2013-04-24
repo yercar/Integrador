@@ -11,7 +11,7 @@
             <Label Name="LblUsuario" HorizontalAlignment="Right" Margin="351,10,0,0" VerticalAlignment="Top" Width="126" Height="28" Foreground="#FFF3EEEE"/>
         </Grid>
         <Grid x:Name="GridContenido" HorizontalAlignment="Left" Height="501" Margin="10,63,0,0" VerticalAlignment="Top" Width="487">
-            <!--<vista:MenuIntegrador/>-->
+            <vista:MenuIntegrador/>
             <!--<vista:CargarArchivo/>-->
             <!--<vista:AdministracionUsuarios/>-->
             <!--<vista:TodosLosUsuarios/>-->
@@ -22,12 +22,12 @@
             <!--<vista:Dimensiones/>-->
             <!--<vista:Bitacora/>-->
             <!--<vista:LecturaAutomatica/>-->
-            <vista:AcercaDe/>
-            
+            <!--<vista:AcercaDe/>-->
         </Grid>
         <Grid x:Name="GridPieAplicacion" HorizontalAlignment="Left" Height="26" Margin="10,569,0,0" VerticalAlignment="Top" Width="487" Background="#FF4F789B">
-            <Image x:Name="ImgMenu" HorizontalAlignment="Left" Height="26" Margin="11,0,0,0" VerticalAlignment="Top" Width="27"/>
-            <Label x:Name="LblMenu" Content="Menú" HorizontalAlignment="Left" Margin="43,0,0,0" VerticalAlignment="Top" Foreground="#FFFBF5F5" Height="26" FontSize="10"/>
+            <Image x:Name="ImgMenu" HorizontalAlignment="Left" Margin="11,0,0,0" VerticalAlignment="Top" Style="{StaticResource ImagenMenu}"/>
+            <Label x:Name="LblMenu" Content="Menú" HorizontalAlignment="Left" Margin="43,0,0,0" VerticalAlignment="Center" Foreground="#FFFBF5F5" Height="26" FontSize="10"/>
+            <Image x:Name="ImgAcercaDe" HorizontalAlignment="Left" Margin="390,0,0,0" VerticalAlignment="Center" Style="{StaticResource ImagenAcercaDe}"/>
             <Label x:Name="LblAcerca" Content="Acerca de..." HorizontalAlignment="Left" Margin="417,0,0,0" VerticalAlignment="Top" Foreground="#FFFBF5F5" Height="26" FontSize="10"/>
         </Grid>
 

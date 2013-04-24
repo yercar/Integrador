@@ -7,15 +7,25 @@
             d:DesignHeight="499.388" d:DesignWidth="480">
     <Grid Background="{DynamicResource {x:Static SystemColors.WindowBrushKey}}">
         <StackPanel>
+            <Separator Height="50" Visibility="Hidden"></Separator>
             <Label x:Name="LblTituloDatosGenerales" Content="Datos generales" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Height="28" Width="211" FontFamily="Segoe UI Semibold"/>
-            <Label Content="Elaborador por: Gonzáles, Cortina, Glender y Cía. (GCG)"></Label>
-            <Label Content="Para Microsoft Dynamics"></Label>
-            <WrapPanel>
+            <Separator Height="30" Visibility="Hidden"></Separator>
+            <Label Content="Elaborador por: Gonzáles, Cortina, Glender y Cía. (GCG)" HorizontalAlignment="Center"></Label>
+            <Label Content="Para Microsoft Dynamics Ax 2012" HorizontalAlignment="Center"></Label>
+            <Separator Height="10" Visibility="Hidden"></Separator>
+            <WrapPanel Margin="30,0,0,0">
                 <Label Content="Autorizado para:"></Label>
                 <Label x:Name="LblAutorizadoPara" Content="..."></Label>
             </WrapPanel>
-            <Label Content="Todos los derechos reservados 2013"></Label>
-            <Label Content="Versión 2.0"></Label>
+            <Label Content="Todos los derechos reservados 2013" Margin="30,0,0,0"></Label>
+            <Label Content="Versión 2.0" Margin="30,0,0,0"></Label>
+            <Separator Height="40" Visibility="Hidden"></Separator>
+            <WrapPanel>
+                <Separator Width="30" Visibility="Hidden"></Separator>
+                <Image x:Name="ImgLogoGcg" Stretch="Uniform"  Style="{StaticResource ImagenLogoGcg}" />
+                <Separator Width="130" Visibility="Hidden"></Separator>
+                <Button x:Name="BtnAceptar" Content="Aceptar" IsDefault="True" Height="26" Width="78" />
+            </WrapPanel>
         </StackPanel>
     </Grid>
 </UserControl>

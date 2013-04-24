@@ -213,7 +213,22 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Imagenes\" />
+    <Resource Include="Imagenes\salir.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Imagenes\acerca_de.png" />
+    <Resource Include="Imagenes\bitacora.png" />
+    <Resource Include="Imagenes\controlInventario.png" />
+    <Resource Include="Imagenes\cuentas.png" />
+    <Resource Include="Imagenes\diarios.png" />
+    <Resource Include="Imagenes\dimensiones.png" />
+    <Resource Include="Imagenes\interfaces.png" />
+    <Resource Include="Imagenes\lecturaAutomatica.png" />
+    <Resource Include="Imagenes\leerArchivo.png" />
+    <Resource Include="Imagenes\logoGCG.gif" />
+    <Resource Include="Imagenes\menu.png" />
+    <Resource Include="Imagenes\recarga.png" />
+    <Resource Include="Imagenes\usuarios.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

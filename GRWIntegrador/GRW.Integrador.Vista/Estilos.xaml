@@ -1,5 +1,6 @@
 ﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
-                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:c1="http://schemas.componentone.com/winfx/2006/xaml">
 
     <LinearGradientBrush x:Key="GradienteTituloTab" EndPoint="0.5,1" StartPoint="0.5,0">
         <GradientStop Color="#FFBFC4C5" Offset="0"/>
@@ -11,6 +12,103 @@
         <Setter Property="FontSize" Value="18"/>
         <Setter Property="Foreground" Value="#FF5495A8"/>
         <Setter Property="Background" Value="{StaticResource GradienteTituloTab}"/>
+    </Style>
+    
+    <Style x:Key="EtiquetasMenuTiles" TargetType="c1:C1Tile">
+        <Setter Property="FontFamily" Value="Segoe UI Semibold"/>
+        <Setter Property="FontSize" Value="12"/>
+        <Setter Property="Foreground" Value="#FFF3E6E6"/>
+        <Setter Property="HeaderForeground" Value="#FFF3E6E6"/>
+    </Style>
+    
+    <Style x:Key="ImagenLogoGcg" TargetType="Image">
+        <Setter Property="Source" Value="pack://application:,,,/GRW.Integrador.Vista;component/Imagenes/logoGCG.gif"/>
+        <Setter Property="Height" Value="59"/>
+        <Setter Property="Width" Value="140"/>
+        <!--<Style.Triggers>
+            <Trigger Property="Image.IsMouseOver" Value="True">
+                <Setter Property="Image.Source" Value="pack://application:,,,/GRW.Integrador.Vista;component/Imagenes/usuarios.png"/>
+                <Setter Property="Image.ToolTip" Value="Usuarios"></Setter>
+            </Trigger>
+        </Style.Triggers>-->
+    </Style>
+
+    <Style x:Key="ImagenMenu" TargetType="Image">
+        <Setter Property="Source" Value="pack://application:,,,/GRW.Integrador.Vista;component/Imagenes/menu.png"/>
+        <Setter Property="Height" Value="23"/>
+        <Setter Property="Width" Value="24"/>
+    </Style>
+
+    <Style x:Key="ImagenAcercaDe" TargetType="Image">
+        <Setter Property="Source" Value="pack://application:,,,/GRW.Integrador.Vista;component/Imagenes/acerca_de.png"/>
+        <Setter Property="Height" Value="23"/>
+        <Setter Property="Width" Value="24"/>
+    </Style>
+
+    <Style x:Key="ImagenSalir" TargetType="Image">
+        <Setter Property="Source" Value="pack://application:,,,/GRW.Integrador.Vista;component/Imagenes/salir.png"/>
+        <Setter Property="Height" Value="40"/>
+        <Setter Property="Width" Value="30"/>
+    </Style>
+
+    <Style x:Key="ImagenBitacora" TargetType="Image">
+        <Setter Property="Source" Value="pack://application:,,,/GRW.Integrador.Vista;component/Imagenes/bitacora.png"/>
+        <Setter Property="Height" Value="87"/>
+        <Setter Property="Width" Value="72"/>
+    </Style>
+
+    <Style x:Key="ImagenControlInventario" TargetType="Image">
+        <Setter Property="Source" Value="pack://application:,,,/GRW.Integrador.Vista;component/Imagenes/controlInventario.png"/>
+        <Setter Property="Height" Value="87"/>
+        <Setter Property="Width" Value="72"/>
+    </Style>
+
+    <Style x:Key="ImagenCuentas" TargetType="Image">
+        <Setter Property="Source" Value="pack://application:,,,/GRW.Integrador.Vista;component/Imagenes/cuentas.png"/>
+        <Setter Property="Height" Value="87"/>
+        <Setter Property="Width" Value="72"/>
+    </Style>
+
+    <Style x:Key="ImagenDiarios" TargetType="Image">
+        <Setter Property="Source" Value="pack://application:,,,/GRW.Integrador.Vista;component/Imagenes/diarios.png"/>
+        <Setter Property="Height" Value="87"/>
+        <Setter Property="Width" Value="72"/>
+    </Style>
+
+    <Style x:Key="ImagenDimensiones" TargetType="Image">
+        <Setter Property="Source" Value="pack://application:,,,/GRW.Integrador.Vista;component/Imagenes/dimensiones.png"/>
+        <Setter Property="Height" Value="87"/>
+        <Setter Property="Width" Value="72"/>
+    </Style>
+
+    <Style x:Key="ImagenInterfaces" TargetType="Image">
+        <Setter Property="Source" Value="pack://application:,,,/GRW.Integrador.Vista;component/Imagenes/interfaces.png"/>
+        <Setter Property="Height" Value="87"/>
+        <Setter Property="Width" Value="72"/>
+    </Style>
+
+    <Style x:Key="ImagenLecturaAutomatica" TargetType="Image">
+        <Setter Property="Source" Value="pack://application:,,,/GRW.Integrador.Vista;component/Imagenes/lecturaAutomatica.png"/>
+        <Setter Property="Height" Value="87"/>
+        <Setter Property="Width" Value="72"/>
+    </Style>
+
+    <Style x:Key="ImagenLeerArchivo" TargetType="Image">
+        <Setter Property="Source" Value="pack://application:,,,/GRW.Integrador.Vista;component/Imagenes/leerArchivo.png"/>
+        <Setter Property="Height" Value="87"/>
+        <Setter Property="Width" Value="72"/>
+    </Style>
+
+    <Style x:Key="ImagenRecarga" TargetType="Image">
+        <Setter Property="Source" Value="pack://application:,,,/GRW.Integrador.Vista;component/Imagenes/recarga.png"/>
+        <Setter Property="Height" Value="87"/>
+        <Setter Property="Width" Value="72"/>
+    </Style>
+
+    <Style x:Key="ImagenUsuarios" TargetType="Image">
+        <Setter Property="Source" Value="pack://application:,,,/GRW.Integrador.Vista;component/Imagenes/usuarios.png"/>
+        <Setter Property="Height" Value="60"/>
+        <Setter Property="Width" Value="50"/>
     </Style>
 
 </ResourceDictionary>
