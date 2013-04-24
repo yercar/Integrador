@@ -6,6 +6,16 @@
              mc:Ignorable="d" 
             d:DesignHeight="499.388" d:DesignWidth="480">
     <Grid Background="{DynamicResource {x:Static SystemColors.WindowBrushKey}}">
-            
+        <StackPanel>
+            <Label x:Name="LblTituloDatosGenerales" Content="Datos generales" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Height="28" Width="211" FontFamily="Segoe UI Semibold"/>
+            <Label Content="Elaborador por: Gonzáles, Cortina, Glender y Cía. (GCG)"></Label>
+            <Label Content="Para Microsoft Dynamics"></Label>
+            <WrapPanel>
+                <Label Content="Autorizado para:"></Label>
+                <Label x:Name="LblAutorizadoPara" Content="..."></Label>
+            </WrapPanel>
+            <Label Content="Todos los derechos reservados 2013"></Label>
+            <Label Content="Versión 2.0"></Label>
+        </StackPanel>
     </Grid>
 </UserControl>
