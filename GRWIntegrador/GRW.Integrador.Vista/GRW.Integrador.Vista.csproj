@@ -38,6 +38,8 @@
     <Reference Include="C1.WPF.4, Version=4.0.20131.311, Culture=neutral, PublicKeyToken=2aa4ec5576d6c3ce, processorArchitecture=MSIL" />
     <Reference Include="c1.wpf.datetimeeditors.4, Version=4.0.20131.311, Culture=neutral, PublicKeyToken=2aa4ec5576d6c3ce, processorArchitecture=MSIL" />
     <Reference Include="c1.wpf.flexgrid.4, Version=4.0.20131.311, Culture=neutral, PublicKeyToken=2aa4ec5576d6c3ce, processorArchitecture=MSIL" />
+    <Reference Include="c1.wpf.reportviewer.4, Version=4.0.20131.311, Culture=neutral, PublicKeyToken=2aa4ec5576d6c3ce, processorArchitecture=MSIL" />
+    <Reference Include="C1.WPF.RichTextBox.4, Version=4.0.20131.311, Culture=neutral, PublicKeyToken=2aa4ec5576d6c3ce, processorArchitecture=MSIL" />
     <Reference Include="c1.wpf.tile.4, Version=4.0.20131.311, Culture=neutral, PublicKeyToken=2aa4ec5576d6c3ce, processorArchitecture=MSIL" />
     <Reference Include="PresentationUI, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
     <Reference Include="ReachFramework" />
@@ -89,6 +91,9 @@
     </Compile>
     <Compile Include="LecturaAutomatica.xaml.cs">
       <DependentUpon>LecturaAutomatica.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ReportesDeDiscrepancias.xaml.cs">
+      <DependentUpon>ReportesDeDiscrepancias.xaml</DependentUpon>
     </Compile>
     <Compile Include="TodosLosUsuarios.xaml.cs">
       <DependentUpon>TodosLosUsuarios.xaml</DependentUpon>
@@ -166,6 +171,10 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="ReportesDeDiscrepancias.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="TodosLosUsuarios.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -226,9 +235,11 @@
     <Resource Include="Imagenes\lecturaAutomatica.png" />
     <Resource Include="Imagenes\leerArchivo.png" />
     <Resource Include="Imagenes\logoGCG.gif" />
-    <Resource Include="Imagenes\menu.png" />
     <Resource Include="Imagenes\recarga.png" />
     <Resource Include="Imagenes\usuarios.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Imagenes\menuBlanco.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

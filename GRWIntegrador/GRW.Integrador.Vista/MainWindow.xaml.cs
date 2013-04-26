@@ -1,6 +1,8 @@
 ﻿using System;
 using System.Windows;
 using System.Security.Principal;
+using GRW.Integrador.Modelo.Entidades;
+using GRW.Integrador.Modelo.Negocio;
 
 namespace GRW.Integrador.Vista
 {
@@ -19,9 +21,13 @@ namespace GRW.Integrador.Vista
 
             LblUsuario.Content = "Usuario: " + System.Threading.Thread.CurrentPrincipal.Identity.Name;
 
-            //MenuIntegrador menuPrincipal = new MenuIntegrador();
-            //contenedor.Children.Clear();
-            //contenedor.Children.Add(menuPrincipal);
+            //TODO: Consulto en la base de datos los permisos que tiene ese usuario para 
+            //asignarlos a la ENTIDAD USUARIO, esta entidad se la debo pasar la contro, de usuario
+            //MENU para saber que botones esan deshabilitados
+            ManejoDeUsuarios modeloManejoUsuarios = new ManejoDeUsuarios();
+            UsuarioEntidad usuarioPermisos = new UsuarioEntidad();
+            usuarioPermisos =
+                modeloManejoUsuarios.ConsultaPermisosUsuario(System.Threading.Thread.CurrentPrincipal.Identity.Name);
         }
 
         private bool LlamarPantallaIngreso()
@@ -43,9 +49,6 @@ namespace GRW.Integrador.Vista
 
                 //asigno la credencial a la aplicación para que viva el usuario en toda su sesión
                 System.Threading.Thread.CurrentPrincipal = credencialUsuario;
-
-                //Consulto en la base de datos los permisos que tiene ese usuario
-
             }
 
             return login.UsuarioAceptado;

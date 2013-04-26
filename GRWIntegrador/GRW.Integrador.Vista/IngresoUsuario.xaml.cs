@@ -22,9 +22,8 @@ namespace GRW.Integrador.Vista
 
             //TODO: Consultar usuario en base de datos
             //Envio usuario y contraseña que puso el usuario a la capa de negocio
-
-            ManejoDeUsuarios validaUsuario = new ManejoDeUsuarios();
-            if(validaUsuario.ConsultaUsuario(txtUsuario.Text, txtPassword.Password))
+            ManejoDeUsuarios modeloManejoUsuarios = new ManejoDeUsuarios();
+            if (modeloManejoUsuarios.ConsultaUsuario(txtUsuario.Text, txtPassword.Password))
             {
                 UsuarioAceptado = true;
             }
