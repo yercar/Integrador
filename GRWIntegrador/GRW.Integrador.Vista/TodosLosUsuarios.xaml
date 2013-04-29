@@ -5,7 +5,8 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:c1="http://schemas.componentone.com/winfx/2006/xaml" x:Class="GRW.Integrador.Vista.TodosLosUsuarios" 
              mc:Ignorable="d" 
-             d:DesignHeight="499.388" d:DesignWidth="480">
+             d:DesignHeight="499.388" d:DesignWidth="480" Name="ControlUsuarioTodosLosUsuarios">
+    
     <Grid Background="{DynamicResource {x:Static SystemColors.WindowBrushKey}}">
         <Label x:Name="LblTituloTodosLosUsuarios" Content="Todos los usuarios" HorizontalAlignment="Left" Margin="24,27,0,0" VerticalAlignment="Top" FontFamily="Segoe UI Semibold"/>
         <c1:C1FlexGrid x:Name="GridTodosLosUsuarios" HorizontalAlignment="Left" Margin="24,71,0,0" VerticalAlignment="Top" Height="406" Width="432">

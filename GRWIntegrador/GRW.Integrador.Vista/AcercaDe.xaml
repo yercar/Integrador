@@ -4,7 +4,8 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              mc:Ignorable="d" 
-            d:DesignHeight="499.388" d:DesignWidth="480">
+            d:DesignHeight="501" d:DesignWidth="487" Name="ControlUsuarioAcercaDe">
+    
     <Grid Background="{DynamicResource {x:Static SystemColors.WindowBrushKey}}">
         <StackPanel>
             <Separator Height="50" Visibility="Hidden"></Separator>
@@ -15,17 +16,12 @@
             <Separator Height="10" Visibility="Hidden"></Separator>
             <WrapPanel Margin="30,0,0,0">
                 <Label Content="Autorizado para:"></Label>
-                <Label x:Name="LblAutorizadoPara" Content="..."></Label>
+                <Label x:Name="LblAutorizadoPara" Content="{Binding ElementName=ControlUsuarioAcercaDe, Path=NombreCliente}" Width="322" FontWeight="Bold"></Label>
             </WrapPanel>
             <Label Content="Todos los derechos reservados 2013" Margin="30,0,0,0"></Label>
             <Label Content="Versión 2.0" Margin="30,0,0,0"></Label>
             <Separator Height="40" Visibility="Hidden"></Separator>
-            <WrapPanel>
-                <Separator Width="30" Visibility="Hidden"></Separator>
-                <Image x:Name="ImgLogoGcg" Stretch="Uniform"  Style="{StaticResource ImagenLogoGcg}" />
-                <Separator Width="130" Visibility="Hidden"></Separator>
-                <Button x:Name="BtnAceptar" Content="Aceptar" IsDefault="True" Height="26" Width="78" />
-            </WrapPanel>
+            <Image x:Name="ImgLogoGcg" Stretch="Uniform"  Style="{StaticResource ImagenLogoGcg}" />
         </StackPanel>
     </Grid>
 </UserControl>

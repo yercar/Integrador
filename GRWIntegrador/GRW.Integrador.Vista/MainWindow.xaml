@@ -2,8 +2,10 @@
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:vista="clr-namespace:GRW.Integrador.Vista"
-        Title="Menú" Height="605.388" Width="525" AllowsTransparency="True" Background="Transparent" 
-        WindowStyle="None" WindowStartupLocation="CenterScreen">
+        Title="Menú" Height="605.388" Width="525" 
+        WindowStyle="None" WindowStartupLocation="CenterScreen" Name="This" 
+        Icon="Imagenes/LogoAx.png" ResizeMode="NoResize"
+        Background="{DynamicResource {x:Static SystemColors.WindowBrushKey}}">
 
     <Grid>
         <Grid x:Name="GridContenedor" HorizontalAlignment="Left" Height="48" Margin="10,10,0,0" VerticalAlignment="Top" Width="487" Background="#FF4F789B">
@@ -11,25 +13,29 @@
             <Label Name="LblUsuario" HorizontalAlignment="Right" Margin="351,10,0,0" VerticalAlignment="Top" Width="126" Height="28" Foreground="#FFF3EEEE"/>
         </Grid>
         <Grid x:Name="GridContenido" HorizontalAlignment="Left" Height="501" Margin="10,63,0,0" VerticalAlignment="Top" Width="487">
-            <vista:MenuIntegrador/>
-            <!--<vista:CargarArchivo/>-->
-            <!--<vista:AdministracionUsuarios/>-->
-            <!--<vista:TodosLosUsuarios/>-->
-            <!--<vista:Interfaces/>-->
-            <!--<vista:ControlDeInventarios/>-->
-            <!--<vista:Diarios/>-->
-            <!--<vista:Cuentas/>-->
-            <!--<vista:Dimensiones/>-->
-            <!--<vista:Bitacora/>-->
-            <!--<vista:LecturaAutomatica/>-->
-            <!--<vista:AcercaDe/>-->
-            <!--<vista:ReportesDeDiscrepancias/>-->
+            <ContentControl>
+                <StackPanel DataContext="{Binding ElementName=This}">
+                    <vista:MenuIntegrador Visibility="{Binding Path=ContenidoMenuIntegrador, Mode=TwoWay}" />
+                    <vista:CargarArchivo Visibility="{Binding Path=ContenidoCargarArchivo, Mode=TwoWay}" />
+                    <vista:AdministracionUsuarios Visibility="{Binding Path=ContenidoAdministracionUsuarios, Mode=TwoWay}" />
+                    <vista:TodosLosUsuarios Visibility="{Binding Path=ContenidoTodosLosUsuarios, Mode=TwoWay}" />
+                    <vista:Interfaces Visibility="{Binding Path=ContenidoInterfaces, Mode=TwoWay}" />
+                    <vista:ControlDeInventarios Visibility="{Binding Path=ContenidoControlDeInventarios, Mode=TwoWay}" />
+                    <vista:Diarios Visibility="{Binding Path=ContenidoDiarios, Mode=TwoWay}" />
+                    <vista:Cuentas Visibility="{Binding Path=ContenidoCuentas, Mode=TwoWay}" />
+                    <vista:Dimensiones Visibility="{Binding Path=ContenidoDimensiones, Mode=TwoWay}" />
+                    <vista:Bitacora Visibility="{Binding Path=ContenidoBitacora, Mode=TwoWay}" />
+                    <vista:LecturaAutomatica Visibility="{Binding Path=ContenidoLecturaAutomatica, Mode=TwoWay}" />
+                    <vista:AcercaDe Visibility="{Binding Path=ContenidoAcercaDe, Mode=TwoWay}" />
+                    <vista:ReportesDeDiscrepancias Visibility="{Binding Path=ContenidoReporteDeDiscrepancias, Mode=TwoWay}" />
+                </StackPanel>
+            </ContentControl>
         </Grid>
         <Grid x:Name="GridPieAplicacion" HorizontalAlignment="Left" Height="26" Margin="10,569,0,0" VerticalAlignment="Top" Width="487" Background="#FF4F789B">
-            <Image x:Name="ImgMenu" HorizontalAlignment="Left" Margin="11,0,0,0" VerticalAlignment="Center" Style="{StaticResource ImagenMenu}"/>
-            <Label x:Name="LblMenu" Content="Menú" HorizontalAlignment="Left" Margin="43,0,0,0" VerticalAlignment="Center" Foreground="#FFFBF5F5" Height="26" FontSize="10"/>
-            <Image x:Name="ImgAcercaDe" HorizontalAlignment="Left" Margin="390,0,0,0" VerticalAlignment="Center" Style="{StaticResource ImagenAcercaDe}"/>
-            <Label x:Name="LblAcerca" Content="Acerca de..." HorizontalAlignment="Left" Margin="417,0,0,0" VerticalAlignment="Top" Foreground="#FFFBF5F5" Height="26" FontSize="10"/>
+            <Image x:Name="ImgMenu" HorizontalAlignment="Left" Margin="11,0,0,0" VerticalAlignment="Center" Style="{StaticResource ImagenMenu}" MouseDown="LblMenu_MouseDown"/>
+            <Label x:Name="LblMenu" Content="Menú" HorizontalAlignment="Left" Margin="31,0,0,0" VerticalAlignment="Center" Foreground="#FFFBF5F5" Height="26" FontSize="10" MouseDown="LblMenu_MouseDown" Width="48"/>
+            <Image x:Name="ImgAcercaDe" HorizontalAlignment="Left" Margin="390,0,0,0" VerticalAlignment="Center" Style="{StaticResource ImagenAcercaDe}" MouseDown="LblAcerca_MouseDown"/>
+            <Label x:Name="LblAcerca" Content="Acerca de..." HorizontalAlignment="Left" Margin="417,0,0,0" VerticalAlignment="Top" Foreground="#FFFBF5F5" Height="26" FontSize="10" MouseDown="LblAcerca_MouseDown"/>
         </Grid>
 
     </Grid>

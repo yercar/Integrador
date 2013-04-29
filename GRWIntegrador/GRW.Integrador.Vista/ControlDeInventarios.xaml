@@ -7,7 +7,8 @@
              xmlns:flexGrid="clr-namespace:C1.WPF.FlexGrid;assembly=C1.WPF.FlexGrid.4"
              x:Class="GRW.Integrador.Vista.ControlDeInventarios" 
              mc:Ignorable="d" 
-             d:DesignHeight="499.388" d:DesignWidth="480">
+             d:DesignHeight="499.388" d:DesignWidth="480" Name="ControlUsuarioContInventarios">
+    
     <Grid Background="{DynamicResource {x:Static SystemColors.WindowBrushKey}}">
         <Label x:Name="LblTituloInventarios" Content="Interfaces" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Height="28" Width="211" FontFamily="Segoe UI Semibold"/>
         <Label x:Name="LblNumeroInterfaces" Content="Número de interfaces:" Margin="21,43,325,432"></Label>

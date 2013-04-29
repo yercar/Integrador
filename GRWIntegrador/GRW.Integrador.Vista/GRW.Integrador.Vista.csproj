@@ -44,6 +44,7 @@
     <Reference Include="PresentationUI, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
     <Reference Include="ReachFramework" />
     <Reference Include="System" />
+    <Reference Include="System.Configuration" />
     <Reference Include="System.Data" />
     <Reference Include="System.Deployment" />
     <Reference Include="System.Drawing" />
@@ -86,6 +87,7 @@
     <Compile Include="Dimensiones.xaml.cs">
       <DependentUpon>Dimensiones.xaml</DependentUpon>
     </Compile>
+    <Compile Include="EnumeracionMenu.cs" />
     <Compile Include="Interfaces.xaml.cs">
       <DependentUpon>Interfaces.xaml</DependentUpon>
     </Compile>
@@ -209,7 +211,9 @@
     <AppDesigner Include="Properties\" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="App.config" />
+    <None Include="App.config">
+      <SubType>Designer</SubType>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\GRW.Integrador.Modelo.Entidades\GRW.Integrador.Modelo.Entidades.csproj">
@@ -240,6 +244,9 @@
   </ItemGroup>
   <ItemGroup>
     <Resource Include="Imagenes\menuBlanco.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Imagenes\LogoAx.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

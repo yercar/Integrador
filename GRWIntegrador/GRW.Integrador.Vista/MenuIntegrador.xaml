@@ -5,63 +5,63 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:C1="http://schemas.componentone.com/wpf/Tile" x:Class="GRW.Integrador.Vista.MenuIntegrador" 
              mc:Ignorable="d" 
-             d:DesignHeight="499.388" d:DesignWidth="480">
+             d:DesignHeight="499.388" d:DesignWidth="480" Name="ControlUsuarioMenu">
     <Grid>
-        <C1:C1Tile HorizontalAlignment="Left" Margin="8,8,0,0" VerticalAlignment="Top" Height="112" Width="276" C1:C1TileService.PointerDownAnimation="True" Header="Cargar archivo" BackContent="Leer datos" Background="#FF61B925" Style="{StaticResource EtiquetasMenuTiles}">
+        <C1:C1Tile x:Name="TileCargarArchivo" HorizontalAlignment="Left" Margin="8,8,0,0" VerticalAlignment="Top" Height="112" Width="276" C1:C1TileService.PointerDownAnimation="True" Header="Cargar archivo" BackContent="Leer datos" Background="#FF61B925" Style="{StaticResource EtiquetasMenuTiles}" Click="TileCargarArchivo_Click">
             <C1:C1Tile.Content>
                 <Image Style="{StaticResource ImagenLeerArchivo}" />
             </C1:C1Tile.Content>
         </C1:C1Tile>
 
-        <C1:C1Tile HorizontalAlignment="Left" Margin="289,8,0,0" VerticalAlignment="Top" Height="112" Width="179" C1:C1TileService.PointerDownAnimation="True" Header="Bitacora" BackContent="Reportes de discrepancias" Background="#FF6952CF" Style="{StaticResource EtiquetasMenuTiles}">
+        <C1:C1Tile x:Name="TileBitacora" HorizontalAlignment="Left" Margin="289,8,0,0" VerticalAlignment="Top" Height="112" Width="179" C1:C1TileService.PointerDownAnimation="True" Header="Bitacora" BackContent="Reportes de discrepancias" Background="#FF6952CF" Style="{StaticResource EtiquetasMenuTiles}" Click="TileBitacora_Click">
             <C1:C1Tile.Content>
                 <Image Style="{StaticResource ImagenBitacora}" />
             </C1:C1Tile.Content>
         </C1:C1Tile>
 
-        <C1:C1SlideTile HorizontalAlignment="Left" VerticalAlignment="Top" Height="150" Width="150" C1:C1TileService.PointerDownAnimation="True" Margin="8,125,0,0" Header="Catálogo" BackContent="Interfaces" Background="#FF77CFBE" SlideDirection="Right" Style="{StaticResource EtiquetasMenuTiles}">
+        <C1:C1SlideTile x:Name="TileSlideInterfaces" HorizontalAlignment="Left" VerticalAlignment="Top" Height="150" Width="150" C1:C1TileService.PointerDownAnimation="True" Margin="8,125,0,0" Header="Catálogo" BackContent="Interfaces" Background="#FF77CFBE" SlideDirection="Right" Style="{StaticResource EtiquetasMenuTiles}" Click="TileSlideInterfaces_Click">
             <C1:C1SlideTile.Content>
                 <Image Style="{StaticResource ImagenInterfaces}" />
             </C1:C1SlideTile.Content>
         </C1:C1SlideTile>
 
-        <C1:C1Tile HorizontalAlignment="Left" VerticalAlignment="Top" Height="150" Width="150" C1:C1TileService.PointerDownAnimation="True" Margin="163,125,0,0" Header="Catálogo" BackContent="Diarios" Background="#FFE848D9" Style="{StaticResource EtiquetasMenuTiles}">
+        <C1:C1Tile x:Name="TileDiarios" HorizontalAlignment="Left" VerticalAlignment="Top" Height="150" Width="150" C1:C1TileService.PointerDownAnimation="True" Margin="163,125,0,0" Header="Catálogo" BackContent="Diarios" Background="#FFE848D9" Style="{StaticResource EtiquetasMenuTiles}" Click="TileDiarios_Click">
             <C1:C1Tile.Content>
                 <Image Style="{StaticResource ImagenDiarios}" />
             </C1:C1Tile.Content>
         </C1:C1Tile>
 
-        <C1:C1Tile HorizontalAlignment="Left" VerticalAlignment="Top" Height="150" Width="150" C1:C1TileService.PointerDownAnimation="True" Margin="318,125,0,0" Header="Catálogo" BackContent="Cuentas" Background="#FFCD6823" Style="{StaticResource EtiquetasMenuTiles}">
+        <C1:C1Tile x:Name="TileCuentas" HorizontalAlignment="Left" VerticalAlignment="Top" Height="150" Width="150" C1:C1TileService.PointerDownAnimation="True" Margin="318,125,0,0" Header="Catálogo" BackContent="Cuentas" Background="#FFCD6823" Style="{StaticResource EtiquetasMenuTiles}" Click="TileCuentas_Click">
             <C1:C1Tile.Content>
                 <Image Style="{StaticResource ImagenCuentas}" />
             </C1:C1Tile.Content>
         </C1:C1Tile>
 
-        <C1:C1SlideTile HorizontalAlignment="Left" VerticalAlignment="Top" Height="97" Width="271" C1:C1TileService.PointerDownAnimation="True" Margin="197,280,0,0" Header="Catálogo" BackContent="Dimensiones" Background="#FF2E3EE8" SlideDirection="Left" Style="{StaticResource EtiquetasMenuTiles}">
+        <C1:C1SlideTile x:Name="TileSlideDimensiones" HorizontalAlignment="Left" VerticalAlignment="Top" Height="97" Width="271" C1:C1TileService.PointerDownAnimation="True" Margin="197,280,0,0" Header="Catálogo" BackContent="Dimensiones" Background="#FF2E3EE8" SlideDirection="Left" Style="{StaticResource EtiquetasMenuTiles}" Click="TileSlideDimensiones_Click">
             <C1:C1SlideTile.Content>
                 <Image Style="{StaticResource ImagenDimensiones}" />
             </C1:C1SlideTile.Content>
         </C1:C1SlideTile>
 
-        <C1:C1Tile HorizontalAlignment="Left" VerticalAlignment="Top" Height="97" Width="184" C1:C1TileService.PointerDownAnimation="True" Margin="8,280,0,0" Header="Catálogo" BackContent="Control de inventarios" Background="#FFCB232A" Style="{StaticResource EtiquetasMenuTiles}">
+        <C1:C1Tile x:Name="TileInventarios" HorizontalAlignment="Left" VerticalAlignment="Top" Height="97" Width="184" C1:C1TileService.PointerDownAnimation="True" Margin="8,280,0,0" Header="Catálogo" BackContent="Control de inventarios" Background="#FFCB232A" Style="{StaticResource EtiquetasMenuTiles}" Click="TileInventarios_Click">
             <C1:C1Tile.Content>
                 <Image Style="{StaticResource ImagenControlInventario}" />
             </C1:C1Tile.Content>
         </C1:C1Tile>
 
-        <C1:C1Tile HorizontalAlignment="Left" VerticalAlignment="Top" Height="107" Width="241" C1:C1TileService.PointerDownAnimation="True" Margin="8,382,0,0" Header="Reprocesos" BackContent="Cargar archivo" Background="#FF64A487" Style="{StaticResource EtiquetasMenuTiles}">
+        <C1:C1Tile x:Name="TileReprocesos" HorizontalAlignment="Left" VerticalAlignment="Top" Height="107" Width="241" C1:C1TileService.PointerDownAnimation="True" Margin="8,382,0,0" Header="Reprocesos" BackContent="Cargar archivo" Background="#FF64A487" Style="{StaticResource EtiquetasMenuTiles}" Click="TileReprocesos_Click">
             <C1:C1Tile.Content>
                 <Image Style="{StaticResource ImagenRecarga}" />
             </C1:C1Tile.Content>
         </C1:C1Tile>
 
-        <C1:C1Tile HorizontalAlignment="Left" VerticalAlignment="Top" Height="66" Width="214" C1:C1TileService.PointerDownAnimation="True" Margin="254,382,0,0" BackContent="Administración" Header="Permisos" Background="#FFD35959" Style="{StaticResource EtiquetasMenuTiles}">
+        <C1:C1Tile x:Name="TilePermisos" HorizontalAlignment="Left" VerticalAlignment="Top" Height="66" Width="214" C1:C1TileService.PointerDownAnimation="True" Margin="254,382,0,0" BackContent="Administración" Header="Permisos" Background="#FFD35959" Style="{StaticResource EtiquetasMenuTiles}" Click="TilePermisos_Click">
             <C1:C1Tile.Content>
                 <Image Style="{StaticResource ImagenUsuarios}" />
             </C1:C1Tile.Content>
         </C1:C1Tile>
 
-        <C1:C1Tile HorizontalAlignment="Left" Margin="254,453,0,0" VerticalAlignment="Top" Height="36" Width="214" C1:C1TileService.PointerDownAnimation="True" Header="Salir" Background="#FF886A99" Style="{StaticResource EtiquetasMenuTiles}" Click="Salir_OnClick">
+        <C1:C1Tile x:Name="TileSalir" HorizontalAlignment="Left" Margin="254,453,0,0" VerticalAlignment="Top" Height="36" Width="214" C1:C1TileService.PointerDownAnimation="True" Header="Salir" Background="#FF886A99" Style="{StaticResource EtiquetasMenuTiles}" Click="Salir_OnClick">
             <C1:C1Tile.Content>
                 <Image Style="{StaticResource ImagenSalir}" />
             </C1:C1Tile.Content>

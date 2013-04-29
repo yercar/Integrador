@@ -6,7 +6,7 @@
              xmlns:reportViewer="clr-namespace:C1.WPF.ReportViewer;assembly=C1.WPF.ReportViewer.4"
              xmlns:wpf="clr-namespace:C1.WPF;assembly=C1.WPF.4"
              mc:Ignorable="d" 
-             d:DesignHeight="499.388" d:DesignWidth="480">
+             d:DesignHeight="499.388" d:DesignWidth="480" Name="ControlUsuarioReportesDiscrepancias">
     <Grid Background="{DynamicResource {x:Static SystemColors.WindowBrushKey}}">
         <StackPanel>
             <Label x:Name="LblTituloDiscrepancias" Content="Reportes de discrepancias" HorizontalAlignment="Left" Margin="10,20,0,0" VerticalAlignment="Top" FontFamily="Segoe UI Semibold"/>    

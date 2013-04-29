@@ -5,7 +5,8 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
              xmlns:dateTimeEditors="clr-namespace:C1.WPF.DateTimeEditors;assembly=C1.WPF.DateTimeEditors.4"
              mc:Ignorable="d" 
-             d:DesignHeight="499.388" d:DesignWidth="480">
+             d:DesignHeight="499.388" d:DesignWidth="480" Name="ControlUsuarioLecturaAutomatica">
+    
     <Grid Background="{DynamicResource {x:Static SystemColors.WindowBrushKey}}">
         <StackPanel>
             <Label x:Name="LblLecturaAutomatica" Content="Lectura automática" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Height="28" Width="211" FontFamily="Segoe UI Semibold"/>

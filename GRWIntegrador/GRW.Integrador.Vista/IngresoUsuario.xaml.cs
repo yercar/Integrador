@@ -1,4 +1,5 @@
-﻿using System.Windows;
+﻿using System;
+using System.Windows;
 using GRW.Integrador.Modelo.Negocio;
 
 namespace GRW.Integrador.Vista
@@ -9,6 +10,7 @@ namespace GRW.Integrador.Vista
     public partial class IngresoUsuario : Window
     {
         public bool UsuarioAceptado { get; set; }
+        public string NombreUsuario { get; set; }
 
         public IngresoUsuario()
         {
@@ -20,15 +22,31 @@ namespace GRW.Integrador.Vista
         {
             UsuarioAceptado = false;
 
-            //TODO: Consultar usuario en base de datos
             //Envio usuario y contraseña que puso el usuario a la capa de negocio
             ManejoDeUsuarios modeloManejoUsuarios = new ManejoDeUsuarios();
-            if (modeloManejoUsuarios.ConsultaUsuario(txtUsuario.Text, txtPassword.Password))
+
+            try
             {
-                UsuarioAceptado = true;
+                if (modeloManejoUsuarios.ConsultaCredencialesDeUsuario(txtUsuario.Text, txtPassword.Password, Convert.ToBoolean(chkAdministrador.IsChecked)))
+                    UsuarioAceptado = true;
+
+                //Definiendo nombre de usuario dependiendo de si es administrador o no
+                if (Convert.ToBoolean(chkAdministrador.IsChecked))
+                    NombreUsuario = txtUsuario.Text;
+                else if (!Convert.ToBoolean(chkAdministrador.IsChecked))
+                {
+                    string[] dominioUsuario = txtUsuario.Text.Split('\\');
+                    NombreUsuario = dominioUsuario[1];
+                }
+                    
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Error de autenticación", MessageBoxButton.OK, MessageBoxImage.Error);
             }
 
             DialogResult = true;
         }
+
     }
 }

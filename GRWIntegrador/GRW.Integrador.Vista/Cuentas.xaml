@@ -6,7 +6,8 @@
              xmlns:c11="clr-namespace:C1.WPF;assembly=C1.WPF.4"
              xmlns:c1="http://schemas.componentone.com/winfx/2006/xaml"
              mc:Ignorable="d" 
-             d:DesignHeight="499.388" d:DesignWidth="480">
+             d:DesignHeight="499.388" d:DesignWidth="480" Name="ControlUsuarioCuentas">
+    
     <Grid Background="{DynamicResource {x:Static SystemColors.WindowBrushKey}}">
         <Label x:Name="LblTituloCuentas" Content="Cuentas" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Height="28" Width="211" FontFamily="Segoe UI Semibold"/>
         <c11:C1TabControl HorizontalAlignment="Left" Margin="0,38,0,0" VerticalAlignment="Top" Height="461" Width="480">

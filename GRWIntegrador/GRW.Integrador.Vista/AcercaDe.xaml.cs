@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Configuration;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -20,9 +21,22 @@ namespace GRW.Integrador.Vista
     /// </summary>
     public partial class AcercaDe : UserControl
     {
+        private string _nombreCliente;
+        public string NombreCliente
+        {
+            get
+            {
+                _nombreCliente = ConfigurationManager.AppSettings.Get("NombreCliente");
+                return _nombreCliente;
+            }
+            set { _nombreCliente = value; }
+        }
+
         public AcercaDe()
         {
             InitializeComponent();
         }
+
+        
     }
 }

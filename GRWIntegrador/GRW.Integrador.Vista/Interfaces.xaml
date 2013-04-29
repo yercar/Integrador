@@ -7,7 +7,8 @@
              xmlns:c1="http://schemas.componentone.com/winfx/2006/xaml" 
              x:Class="GRW.Integrador.Vista.Interfaces" 
              mc:Ignorable="d" 
-             d:DesignHeight="499.388" d:DesignWidth="480">
+             d:DesignHeight="499.388" d:DesignWidth="480" Name="ControlUsuarioInterfaces">
+    
     <Grid Background="{DynamicResource {x:Static SystemColors.WindowBrushKey}}">
         <Label x:Name="LblTituloInterfaces" Content="Interfaces" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Height="28" Width="211" FontFamily="Segoe UI Semibold"/>
         <c1Tab:C1TabControl HorizontalAlignment="Left" Margin="19,56,0,0" VerticalAlignment="Top" Height="433" Width="451">

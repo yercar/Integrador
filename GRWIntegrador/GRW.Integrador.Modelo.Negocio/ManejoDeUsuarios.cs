@@ -1,39 +1,76 @@
 ﻿
+using System;
+using System.DirectoryServices;
+using GRW.Integrador.DAO;
 using GRW.Integrador.Modelo.Entidades;
 
 namespace GRW.Integrador.Modelo.Negocio
 {
     public class ManejoDeUsuarios
     {
-        public bool ConsultaUsuario(string nombreUsuario, string password)
+        public bool ConsultaCredencialesDeUsuario(string nombreUsuario, string password, bool esAdministrador)
         {
-            //TODO: abre conexion con base de datos
+            bool passwordIguales = false;
 
+            if (esAdministrador)
+            {
+                //PARA EL CASO DE USAR PASS DE HASH
+                string passwordBaseDatos = "GJr8VHt24t4S21o5yhkNJEE3vhZ986ce";  //Hasheo de: Passw0rd
 
-            //TODO: consulta que el usuario exista y devuelve la entidad de usuario
-            string passwordBaseDatos = "GJr8VHt24t4S21o5yhkNJEE3vhZ986ce";  //Hasheo de: Passw0rd
+                //comparando claves hasheadas
+                Hasheador hasheo = new Hasheador();
+                passwordIguales = hasheo.ComparaHash(password, passwordBaseDatos);
 
-            //comparando claves hasheadas
-            Hasheador hasheo = new Hasheador();
-            bool passwordIguales = hasheo.ComparaHash(password, passwordBaseDatos);
+                if (nombreUsuario != "Admin")
+                    passwordIguales = false;
+            }
+            else
+            {
+                //PARA AUTENTICACIÓN CON ACTIVE DIRECTORY
+                try
+                {
+                    string[] dominioUsuario = nombreUsuario.Split('\\');
 
-            //TODO: cierra conexión con base de datos
+                    if (dominioUsuario.Length != 2)
+                    {
+                        throw new Exception("Debe poner un dominio válido");
+                    }
+                    else
+                    {
+                        DirectoryEntry entry = new DirectoryEntry("LDAP://" + dominioUsuario[0],
+                                                              dominioUsuario[1], password);
+                        object nativeObject = entry.NativeObject;
+                        passwordIguales = true;
+                    }
+                    
+                }
+                catch (DirectoryServicesCOMException ex)
+                {
+                    throw new Exception(ex.Message);
+                }
+                catch (Exception ex)
+                {
+                    throw new Exception(ex.Message);
+                }
+            }
 
             return passwordIguales;
         }
 
         public UsuarioEntidad ConsultaPermisosUsuario(string nombreUsuario)
         {
-            //TODO: abre conexion con base de datos
+            try
+            {
+                UsuarioEntidad usuarioPermisos;
+                DAOUsuarios infoUsuarios = new DAOUsuarios();
+                usuarioPermisos = infoUsuarios.ConsultaPermisosUsuario(nombreUsuario);
 
-            //TODO:Consulta permisos de usuario en base de datos
-            UsuarioEntidad usuarioPermisos = new UsuarioEntidad();
-            //usuarioPermisos.AllowAutoConf = 
-            //usuarioPermisos.AllowAccount =
-
-            //TODO: cierra conexión con base de datos
-
-            return usuarioPermisos;
+                return usuarioPermisos;
+            }
+            catch (Exception ex)
+            {
+                throw new Exception(ex.Message);
+            }
         }
     }
 }

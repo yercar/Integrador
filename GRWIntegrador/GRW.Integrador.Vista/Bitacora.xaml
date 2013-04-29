@@ -3,7 +3,8 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
-             mc:Ignorable="d" d:DesignHeight="499.388" d:DesignWidth="480">
+             mc:Ignorable="d" d:DesignHeight="499.388" d:DesignWidth="480" Name="ControlUsuarioBitacora">
+    
     <Grid Background="{DynamicResource {x:Static SystemColors.WindowBrushKey}}">
         <StackPanel>
             <Label x:Name="LblTituloBitacora" Content="Bitacora de reporte de discrepancias" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Height="28" Width="211" FontFamily="Segoe UI Semibold"/>
